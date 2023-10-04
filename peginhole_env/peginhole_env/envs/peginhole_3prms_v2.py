@@ -71,6 +71,7 @@ class Peginhole_env(mujoco_env.MujocoEnv, utils.EzPickle):
             self.viewer = mujoco_py.MjViewer(self.sim)
         else:
             self.viewer = None
+        self.steps = 0
 
     def reset(self):
         if self.viewer is not None:
@@ -129,6 +130,7 @@ class Peginhole_env(mujoco_env.MujocoEnv, utils.EzPickle):
             self.do_simulation(action/10 , self.frame_skip)
         ob = self._get_obs()
         # evalute reward
+        self.steps += 1
         dist = np.linalg.norm(ob[0:3] - self.goal)
         if dist < 0.3:
             done = False
@@ -136,7 +138,7 @@ class Peginhole_env(mujoco_env.MujocoEnv, utils.EzPickle):
         else:
             done = False
             reward = np.power(10, 3 - dist)
-        reward = reward
+        reward = reward - self.steps*0.001
         if self.evaluation and dist < 0.5:
             done = True
         if self.viewer is not None:

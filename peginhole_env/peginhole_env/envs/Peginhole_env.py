@@ -19,7 +19,7 @@ class Peginhole_env(mujoco_env.MujocoEnv, utils.EzPickle):
         # mujoco_env.MujocoEnv.__init__(self,
         #                               os.getcwd()+'/fall2020_peginhole_square.xml', 1)
         mujoco_env.MujocoEnv.__init__(self,
-                                      '/home/zx/UCBerkeley/insertion/peginhole_env/peginhole_env/envs/fall2020_peginhole_square.xml', 1)
+                                      '/home/zhifeishen/code/Hybrid-action-for-insertion/peginhole_env/peginhole_env/envs/fall2020_peginhole_square.xml', 1)
         # obs units are cm now !!
         # action units are cm/s now !!
         if self.render:

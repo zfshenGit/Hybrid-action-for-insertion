@@ -82,10 +82,10 @@
         <velocity name='velocity3' joint='slide3' kv="10" ctrllimited = "true" ctrlrange = "-0.1 0.1" forcelimited = "true" forcerange = "-50 50"/>
 
 
-        <velocity name='rotation1' joint='hinge1' kv="10"  ctrllimited = "true" ctrlrange = "-0.35 0.35" forcelimited = "true" forcerange = "-10 10"/>
+        <velocity name='rotation1' joint='hinge1' kv="10"  ctrllimited = "true" ctrlrange = "-1 1" forcelimited = "true" forcerange = "-10 10"/>
         <!-- limit 20 degrees per second -->
-        <velocity name='rotation2' joint='hinge2' kv="10" ctrllimited = "true" ctrlrange = "-0.35 0.35" forcelimited = "true" forcerange = "-10 10"/>
-        <velocity name='rotation3' joint='hinge3' kv="10" ctrllimited = "true" ctrlrange = "-0.35 0.35" forcelimited = "true" forcerange = "-10 10"/>
+        <velocity name='rotation2' joint='hinge2' kv="10" ctrllimited = "true" ctrlrange = "-1 1" forcelimited = "true" forcerange = "-10 10"/>
+        <velocity name='rotation3' joint='hinge3' kv="10" ctrllimited = "true" ctrlrange = "-1 1" forcelimited = "true" forcerange = "-10 10"/>
 
 
 
